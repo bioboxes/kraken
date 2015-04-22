@@ -1,0 +1,1 @@
+default: kraken --db $DB $CONTIGS > $KRAKEN_OUT
