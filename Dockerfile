@@ -11,6 +11,7 @@ ENV BASE_URL  https://s3-us-west-1.amazonaws.com/bioboxes-tools/validate-biobox-
 ENV VERSION   0.x.y
 ENV VALIDATOR /bbx/validator/
 RUN sudo mkdir -p  ${VALIDATOR} && sudo chmod -R a+wx  /bbx
+ADD schema.yaml ${VALIDATOR}
 
 # install yaml2json and jq tools
 ENV CONVERT https://github.com/bronze1man/yaml2json/raw/master/builds/linux_386/yaml2json
