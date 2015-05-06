@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set -o errexit
+set -o nounset
+
 TASK=$1
 OUTPUT=/bbx/output/bbx
 INPUT=/bbx/input/biobox.yaml
