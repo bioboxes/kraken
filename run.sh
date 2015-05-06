@@ -55,10 +55,10 @@ fi
 
 eval ${CMD}
 
+mkdir -p $OUTPUT
+
 #build cami format
 awk 'BEGIN { FS = "\t"} /^C/ { print $2"\t"$3 } ' $KRAKEN_OUT > ${OUTPUT}/out.binning
-
-mkdir -p $OUTPUT
 
 cat << EOF > ${OUTPUT}/biobox.yaml
 version: 0.9.0
